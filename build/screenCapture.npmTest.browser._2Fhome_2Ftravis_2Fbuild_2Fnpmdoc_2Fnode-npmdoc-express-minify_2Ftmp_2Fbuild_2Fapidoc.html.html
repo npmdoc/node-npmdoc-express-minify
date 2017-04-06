@@ -1,0 +1,518 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/SummerWish/express-minify">express-minify (v0.2.0)</a>
+</h1>
+<h4>Automatically minify and cache your javascript and css files.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-minify">module express-minify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-minify.Cache">
+            function <span class="apidocSignatureSpan">express-minify.</span>Cache
+            <span class="apidocSignatureSpan">(cacheDirectory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-minify.Minifier">
+            function <span class="apidocSignatureSpan">express-minify.</span>Minifier
+            <span class="apidocSignatureSpan">(uglifyJS, cssmin, errorHandler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-minify.</span>Minifier.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-minify.Minifier">module express-minify.Minifier</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-minify.Minifier.Minifier">
+            function <span class="apidocSignatureSpan">express-minify.</span>Minifier
+            <span class="apidocSignatureSpan">(uglifyJS, cssmin, errorHandler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-minify.Minifier.defaultErrorHandler">
+            function <span class="apidocSignatureSpan">express-minify.Minifier.</span>defaultErrorHandler
+            <span class="apidocSignatureSpan">(err, stage, assetType, minifyOptions, body, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_COFFEE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_CSS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_JS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_JSON</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_LESS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_SASS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_STYLUS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">express-minify.Minifier.</span>TYPE_TEXT</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-minify.Minifier.prototype">module express-minify.Minifier.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-minify.Minifier.prototype.compileAndMinify">
+            function <span class="apidocSignatureSpan">express-minify.Minifier.prototype.</span>compileAndMinify
+            <span class="apidocSignatureSpan">(assetType, minifyOptions, body, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-minify" id="apidoc.module.express-minify">module express-minify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-minify.Cache" id="apidoc.element.express-minify.Cache">
+        function <span class="apidocSignatureSpan">express-minify.</span>Cache
+        <span class="apidocSignatureSpan">(cacheDirectory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Cache = function (cacheDirectory) {
+  this.isFileCache = (cacheDirectory !== false);
+  if (this.isFileCache) {
+    // whether the directory is writeable
+    cacheDirectory = path.normalize(cacheDirectory + '/').toString();
+    try {
+      fs.accessSync(cacheDirectory, fs.W_OK);
+    } catch (ignore) {
+      console.log('WARNING: express-minify cache directory is not writeable, fallback to memory cache.');
+      this.isFileCache = false;
+    }
+  }
+  if (this.isFileCache) {
+    this.layer = new FileCache(cacheDirectory);
+  } else {
+    this.layer = new MemoryCache();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var css_match = options.css_match || /css/;
+  var sass_match = options.sass_match || /scss/;
+  var less_match = options.less_match || /less/;
+  var stylus_match = options.stylus_match || /stylus/;
+  var coffee_match = options.coffee_match || /coffeescript/;
+  var json_match = options.json_match || /json/;
+
+  var cache = new Factory.<span class="apidocCodeKeywordSpan">Cache</span>(options.cache || false);
+  var minifier = new Factory.Minifier(options.uglifyJS, options.cssmin, options.onerror);
+
+  return function express_minify_middleware(req, res, next) {
+var write = res.write;
+var end = res.end;
+
+var buf = null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-minify.Minifier" id="apidoc.element.express-minify.Minifier">
+        function <span class="apidocSignatureSpan">express-minify.</span>Minifier
+        <span class="apidocSignatureSpan">(uglifyJS, cssmin, errorHandler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Minifier = function (uglifyJS, cssmin, errorHandler) {
+  this.handleError = errorHandler || Minifier.defaultErrorHandler;
+  this.uglifyJS = uglifyJS || require('uglify-js');
+  this.cssmin = cssmin || require('cssmin');
+  this.sass = testModule('node-sass');
+  this.less = testModule('less');
+  this.stylus = testModule('stylus');
+  this.coffee = testModule('coffee-script');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var sass_match = options.sass_match || /scss/;
+  var less_match = options.less_match || /less/;
+  var stylus_match = options.stylus_match || /stylus/;
+  var coffee_match = options.coffee_match || /coffeescript/;
+  var json_match = options.json_match || /json/;
+
+  var cache = new Factory.Cache(options.cache || false);
+  var minifier = new Factory.<span class="apidocCodeKeywordSpan">Minifier</span>(options.uglifyJS, options.cssmin, options.onerror
+);
+
+  return function express_minify_middleware(req, res, next) {
+var write = res.write;
+var end = res.end;
+
+var buf = null;
+var type = Factory.Minifier.TYPE_TEXT;
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-minify.Minifier" id="apidoc.module.express-minify.Minifier">module express-minify.Minifier</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-minify.Minifier.Minifier" id="apidoc.element.express-minify.Minifier.Minifier">
+        function <span class="apidocSignatureSpan">express-minify.</span>Minifier
+        <span class="apidocSignatureSpan">(uglifyJS, cssmin, errorHandler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Minifier = function (uglifyJS, cssmin, errorHandler) {
+  this.handleError = errorHandler || Minifier.defaultErrorHandler;
+  this.uglifyJS = uglifyJS || require('uglify-js');
+  this.cssmin = cssmin || require('cssmin');
+  this.sass = testModule('node-sass');
+  this.less = testModule('less');
+  this.stylus = testModule('stylus');
+  this.coffee = testModule('coffee-script');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var sass_match = options.sass_match || /scss/;
+  var less_match = options.less_match || /less/;
+  var stylus_match = options.stylus_match || /stylus/;
+  var coffee_match = options.coffee_match || /coffeescript/;
+  var json_match = options.json_match || /json/;
+
+  var cache = new Factory.Cache(options.cache || false);
+  var minifier = new Factory.<span class="apidocCodeKeywordSpan">Minifier</span>(options.uglifyJS, options.cssmin, options.onerror
+);
+
+  return function express_minify_middleware(req, res, next) {
+var write = res.write;
+var end = res.end;
+
+var buf = null;
+var type = Factory.Minifier.TYPE_TEXT;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-minify.Minifier.defaultErrorHandler" id="apidoc.element.express-minify.Minifier.defaultErrorHandler">
+        function <span class="apidocSignatureSpan">express-minify.Minifier.</span>defaultErrorHandler
+        <span class="apidocSignatureSpan">(err, stage, assetType, minifyOptions, body, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultErrorHandler = function (err, stage, assetType, minifyOptions, body, callback) {
+  if (stage === 'compile') {
+    callback(err, JSON.stringify(err));
+    return;
+  }
+  callback(err, body);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-minify.Minifier.prototype" id="apidoc.module.express-minify.Minifier.prototype">module express-minify.Minifier.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-minify.Minifier.prototype.compileAndMinify" id="apidoc.element.express-minify.Minifier.prototype.compileAndMinify">
+        function <span class="apidocSignatureSpan">express-minify.Minifier.prototype.</span>compileAndMinify
+        <span class="apidocSignatureSpan">(assetType, minifyOptions, body, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compileAndMinify = function (assetType, minifyOptions, body, callback) {
+  if (typeof callback !== 'function') {
+    return;
+  }
+
+  var self = this;
+  var result, opt;
+
+  switch (assetType) {
+  case Minifier.TYPE_JS:
+    result = body;
+    try {
+      if (!minifyOptions.noMinify) {
+        opt = extend({fromString: true}, minifyOptions.uglifyOpt);
+        result = self.uglifyJS.minify(result, opt).code;
+      }
+    } catch (err) {
+      self.handleError(err, 'minify', assetType, minifyOptions, result, callback);
+      return;
+    }
+    callback(null, result);
+    break;
+  case Minifier.TYPE_CSS:
+    result = body;
+    try {
+      if (!minifyOptions.noMinify) {
+        result = self.cssmin(result);
+      }
+    } catch (err) {
+      self.handleError(err, 'minify', assetType, minifyOptions, result, callback);
+      return;
+    }
+    callback(null, result);
+    break;
+  case Minifier.TYPE_SASS:
+    if (!self.sass) {
+      self.sass = require('node-sass');
+    }
+    result = body;
+    try {
+      result = self.sass.renderSync({
+        data: result
+      }).css.toString();
+    } catch (err) {
+      self.handleError(err, 'compile', assetType, minifyOptions, result, callback);
+      return;
+    }
+    try {
+      if (!minifyOptions.noMinify) {
+        result = self.cssmin(result);
+      }
+    } catch (err) {
+      self.handleError(err, 'minify', assetType, minifyOptions, result, callback);
+      return;
+    }
+    callback(null, result);
+    break;
+  case Minifier.TYPE_LESS:
+    if (!self.less) {
+      self.less = require('less');
+    }
+    result = body;
+    self.less.render(result, function (err, output) {
+      if (err) {
+        self.handleError(err, 'compile', assetType, minifyOptions, result, callback);
+        return;
+      }
+      result = output.css;
+      try {
+        if (!minifyOptions.noMinify) {
+          result = self.cssmin(result);
+        }
+      } catch (err) {
+        self.handleError(err, 'minify', assetType, minifyOptions, result, callback);
+        return;
+      }
+      callback(null, result);
+    });
+    break;
+  case Minifier.TYPE_STYLUS:
+    if (!self.stylus) {
+      self.stylus = require('stylus');
+    }
+    result = body;
+    self.stylus.render(result, function (err, css) {
+      if (err) {
+        self.handleError(err, 'compile', assetType, minifyOptions, result, callback);
+        return;
+      }
+      result = css;
+      try {
+        if (!minifyOptions.noMinify) {
+          result = self.cssmin(result);
+        }
+      } catch (err) {
+        self.handleError(err, 'minify', assetType, minifyOptions, result, callback);
+        return;
+      }
+      callback(null, result);
+    });
+    break;
+  case Minifier.TYPE_COFFEE:
+    if (!self.coffee) {
+      self.coffee = require('coffee-script');
+    }
+    result = body;
+    try {
+      result = self.coffee.compile(result);
+    } catch (err) {
+      self.handleError(err, 'compile', assetType, minifyOptions, result, callback);
+      return;
+    }
+    try {
+      if (!minifyOptions.noMinify) {
+        opt = extend({fromString: true}, minifyOptions.uglifyOpt);
+        result = self.uglifyJS.minify(result, opt).code;
+      }
+    } catch (err) {
+      self.handleError(err, 'minify', assetType, minifyOptions, result, callback);
+      return;
+    }
+    callback(null, result);
+    break;
+  case Minifier.TYPE_JSON:
+    result = body;
+    try {
+      if (!minifyOptions.noMinify) {
+        result = JSON.stringify(JSON.parse(result));
+      }
+    } catch (err) {
+      self.handleError(err, 'minify', assetType, minifyOptions, result, callback);
+      return;
+    }
+    callback(null, result);
+    break;
+  default:
+    callback(null, body);
+    break;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var cacheKey = crypto.createHash('sha1').update(JSON.stringify(minifyOptions) + buffer).digest('hex').toString
+();
+var self = this;
+
+cache.layer.get(cacheKey, function (err, minized) {
+  if (err) {
+    // cache miss
+    minifier.<span class="apidocCodeKeywordSpan">compileAndMinify</span>(type, minifyOptions, buffer.toString(encoding), function
+ (err, minized) {
+      if (self._no_cache || err) {
+        // do not cache the response body
+        write.call(self, minized, 'utf8');
+        end.call(self);
+      } else {
+        cache.layer.put(cacheKey, minized, function () {
+          write.call(self, minized, 'utf8');
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
